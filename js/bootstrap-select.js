@@ -342,11 +342,11 @@
     liveSearchNormalize: false,
     liveSearchStyle: 'contains',
     actionsBox: false,
-    iconBase: 'glyphicon',
-    tickIcon: 'glyphicon-ok',
+    iconBase: 'md',
+    tickIcon: 'md-radio-button-on',
     showTick: false,
     template: {
-      caret: '<span class="caret"></span>'
+      caret: '<i class="fa fa-angle-down caretDown"></i>'
     },
     maxOptions: false,
     mobile: false,
