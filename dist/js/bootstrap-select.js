@@ -365,11 +365,11 @@
     liveSearchNormalize: false,
     liveSearchStyle: 'contains',
     actionsBox: false,
-    iconBase: 'glyphicon',
-    tickIcon: 'glyphicon-ok',
+    iconBase: 'md',
+    tickIcon: 'md-radio-button-on',
     showTick: false,
     template: {
-      caret: '<span class="caret"></span>'
+      caret: '<i class="fa fa-angle-down caretDown"></i>'
     },
     maxOptions: false,
     mobile: false,
@@ -559,9 +559,9 @@
        */
       var generateLI = function (content, index, classes, optgroup) {
         return '<li' +
-            ((typeof classes !== 'undefined' & '' !== classes) ? ' class="' + classes + '"' : '') +
-            ((typeof index !== 'undefined' & null !== index) ? ' data-original-index="' + index + '"' : '') +
-            ((typeof optgroup !== 'undefined' & null !== optgroup) ? 'data-optgroup="' + optgroup + '"' : '') +
+            ((typeof classes !== 'undefined' && '' !== classes) ? ' class="' + classes + '"' : '') +
+            ((typeof index !== 'undefined' && null !== index) ? ' data-original-index="' + index + '"' : '') +
+            ((typeof optgroup !== 'undefined' && null !== optgroup) ? 'data-optgroup="' + optgroup + '"' : '') +
             '>' + content + '</li>';
       };
 
@@ -805,7 +805,9 @@
       }
 
       //If we dont have a title, then use the default, or if nothing is set at all, use the not selected text
+      this.$button.toggleClass("isSet",  true );
       if (!title) {
+        this.$button.toggleClass("isSet",  false );
         title = typeof this.options.title !== 'undefined' ? this.options.title : this.options.noneSelectedText;
       }
 
