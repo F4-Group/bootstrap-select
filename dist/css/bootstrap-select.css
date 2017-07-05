@@ -169,10 +169,10 @@ select.selectpicker {
   position: relative;
   padding-left: 2.25em;
 }
-.bootstrap-select.btn-group .dropdown-menu li a span.check-mark {
+.bootstrap-select.btn-group .dropdown-menu li a .check-mark {
   display: none;
 }
-.bootstrap-select.btn-group .dropdown-menu li a span.text {
+.bootstrap-select.btn-group .dropdown-menu li a .text {
   display: inline-block;
 }
 .bootstrap-select.btn-group .dropdown-menu li small {
@@ -209,13 +209,13 @@ select.selectpicker {
   top: auto;
   margin-top: -1px;
 }
-.bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
+.bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a .check-mark {
   position: absolute;
   display: inline-block;
   right: 15px;
   margin-top: 5px;
 }
-.bootstrap-select.btn-group.show-tick .dropdown-menu li a span.text {
+.bootstrap-select.btn-group.show-tick .dropdown-menu li a .text {
   margin-right: 34px;
 }
 .bootstrap-select.show-menu-arrow.open > .dropdown-toggle {
