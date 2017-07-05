@@ -782,7 +782,9 @@
       }
 
       //If we dont have a title, then use the default, or if nothing is set at all, use the not selected text
+      this.$button.toggleClass("isSet",  true );
       if (!title) {
+        this.$button.toggleClass("isSet",  false );
         title = typeof this.options.title !== 'undefined' ? this.options.title : this.options.noneSelectedText;
       }
 
