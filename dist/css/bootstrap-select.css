@@ -169,10 +169,10 @@ select.selectpicker {
   position: relative;
   padding-left: 2.25em;
 }
-.bootstrap-select.btn-group .dropdown-menu li a span.check-mark {
+.bootstrap-select.btn-group .dropdown-menu li a .check-mark {
   display: none;
 }
-.bootstrap-select.btn-group .dropdown-menu li a span.text {
+.bootstrap-select.btn-group .dropdown-menu li a .text {
   display: inline-block;
 }
 .bootstrap-select.btn-group .dropdown-menu li small {

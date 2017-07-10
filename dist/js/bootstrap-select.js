@@ -367,6 +367,7 @@
     actionsBox: false,
     iconBase: 'glyphicon',
     tickIcon: 'glyphicon-ok',
+    htmlTag: "span",
     showTick: false,
     template: {
       caret: '<span class="caret"></span>'
@@ -579,7 +580,8 @@
             (that.options.liveSearchNormalize ? ' data-normalized-text="' + normalizeToBase(htmlEscape($(text).html())) + '"' : '') +
             (typeof tokens !== 'undefined' || tokens !== null ? ' data-tokens="' + tokens + '"' : '') +
             ' role="option">' + text +
-            '<span class="' + that.options.iconBase + ' ' + that.options.tickIcon + ' check-mark"></span>' +
+            '<' + that.options.htmlTag + ' class="' + that.options.iconBase + ' ' + that.options.tickIcon + ' check-mark">' +
+            '</' + that.options.htmlTag + '>' +
             '</a>';
       };
 
@@ -808,6 +810,9 @@
       if (!title) {
         title = typeof this.options.title !== 'undefined' ? this.options.title : this.options.noneSelectedText;
       }
+
+      //add or remove empty class on button to allow for css customization when empty (or not)
+      this.$button.toggleClass("empty", selectedItems.length === 0);
 
       //strip all HTML tags and trim the result, then unescape any escaped tags
       this.$button.attr('title', htmlUnescape($.trim(title.replace(/<[^>]*>?/g, ''))));
